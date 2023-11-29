@@ -1,0 +1,238 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+/* Styling the navigation bar */
+.navbar {
+    background-color: #fff; /* White background for visibility */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.navbar-brand {
+    font-size: 1.2em;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.menu li {
+    padding: 0 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+.menu li a, .menu li span {
+    color: #333;
+    margin-right: 8px;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.material-symbols-outlined {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.menu li a:hover {
+    color: #007bff;
+}
+
+/* Main content area */
+.coming-soon {
+    display: grid;
+    place-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.coming-soon h1 {
+    font-size: 2.5em;
+}
+
+.coming-soon p {
+    margin-top: 0.5em;
+}
+
+/* Footer styling */
+footer {
+    background-color: white;
+    color: #333;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+    justify-content: center;
+}
+
+.footer-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn.btn-social {
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+}
+
+.btn.btn-social:hover {
+    color: #007bff;
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+.footer-menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-menu li a:hover {
+    color: #007bff;
+}
+
+/* Mobile menu styles */
+.mobile-menu-icon {
+    display: none;  /* Hidden by default */
+    cursor: pointer;
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensures it's above other elements */
+}
+
+
+/* Floating icons as background */
+.floating-icon {
+    position: absolute;
+    font-size: 7rem;
+    color: rgba(0, 0, 0, 0.1);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .menu {
+        width: 100%;
+        display: none;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+}
+
+/* Responsive design adjustments for small devices */
+@media (max-width: 767.98px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center; /* Center align items */
+        padding: 0.5em; /* Adjust padding for smaller screens */
+    }
+
+    .menu {
+        width: 100%; /* Full width for the dropdown menu */
+        display: none; /* Initially hide the menu */
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when active */
+        flex-direction: column;
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Show mobile menu icon */
+    }
+
+    .menu li a {
+        font-size: 0.8em; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Responsive design adjustments for medium devices */
+@media (max-width: 991.98px) {
+    .coming-soon h1 {
+        font-size: 2.2em;
+    }
+}
+
+/* Responsive design adjustments for large devices */
+@media (max-width: 1199.98px) {
+    .coming-soon h1 {
+        font-size: 2.4em;
+    }
+}
+
+/* Responsive design adjustments for x-large devices */
+@media (max-width: 1399.98px) {
+    .coming-soon h1 {
+        font-size: 2.6em;
+    }
+}
+
+@media (max-width: 575px) {
+    .coming-soon h1 {
+        font-size: 1.8em;
+    }
+
+    .floating-icon {
+        font-size: 4rem;
+    }
+}
