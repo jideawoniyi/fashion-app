@@ -53,13 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Define positions for each menu item in the 'W' shape
             const positions = [
                 { x: '0%', y: '10%' },    // Home
-                { x: '25%', y: '35%' },   // Shop
-                { x: '45%', y: '10%' },   // New
+                { x: '20%', y: '35%' },   // Shop
+                { x: '40%', y: '10%' },   // New
                 { x: '65%', y: '35%' },   // Trending
-                { x: '80%', y: '10%' },   // Contact
+                { x: '75%', y: '10%' },   // Contact
                 { x: '65%', y: '60%' },   // Login
-                { x: '45%', y: '85%' },   // Signup
-                { x: '25%', y: '60%' }    // Cart
+                { x: '45%', y: '35%' },   // Signup
+                { x: '20%', y: '60%' }    // Cart
             ];
             
     

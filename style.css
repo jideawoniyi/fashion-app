@@ -162,7 +162,7 @@ ul.menu {
 /* Floating icons as background */
 .floating-icon {
     position: absolute;
-    font-size: 4rem;
+    font-size: 3rem;
     color: rgba(0, 0, 0, 0.1);
     transition: transform 5s ease-in-out; /* Smooth transition for movement */
 }
