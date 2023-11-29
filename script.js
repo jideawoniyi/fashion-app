@@ -44,4 +44,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
         setInterval(updatePosition, 50);
     }
+
+    // Script for arranging menu items in 'W' shape
+    function arrangeMenuItemsInWShape() {
+        const menuItems = menu.querySelectorAll('li');
+    
+        if (window.innerWidth <= 768) {
+            // Define positions for each menu item in the 'W' shape
+            const positions = [
+                { x: '0%', y: '10%' },    // Home
+                { x: '25%', y: '35%' },   // Shop
+                { x: '45%', y: '10%' },   // New
+                { x: '65%', y: '35%' },   // Trending
+                { x: '80%', y: '10%' },   // Contact
+                { x: '65%', y: '60%' },   // Login
+                { x: '45%', y: '85%' },   // Signup
+                { x: '25%', y: '60%' }    // Cart
+            ];
+            
+    
+            menuItems.forEach((item, index) => {
+                item.style.position = 'absolute';
+                item.style.left = positions[index].x;
+                item.style.top = positions[index].y;
+            });
+        } else {
+            // Reset styles for non-mobile view
+            menuItems.forEach((item) => {
+                item.style.position = '';
+                item.style.left = '';
+                item.style.top = '';
+            });
+        }
+    }
+    
+    
+
+    // Initial arrangement
+    arrangeMenuItemsInWShape();
+
+    // Re-arrange on window resize
+    window.addEventListener('resize', arrangeMenuItemsInWShape);
 });
