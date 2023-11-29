@@ -10,6 +10,8 @@ html, body {
     font-family: 'Arial', sans-serif;
     background-color: white;
     color: #333;
+    max-width: 100%;
+    overflow: hidden; /* Prevents scrolling */
 }
 
 /* Styling the navigation bar */
@@ -17,7 +19,7 @@ html, body {
     background-color: #fff; /* White background for visibility */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Ensures vertical centering of children */
     padding: 1em;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
 }
@@ -26,7 +28,11 @@ html, body {
     font-size: 1.2em;
     color: #007bff;
     font-weight: bold;
+    display: flex;
+    align-items: center; /* Center-align brand vertically */
+    padding-left: 1em; /* Added left padding */
 }
+
 
 .menu {
     list-style: none;
@@ -60,7 +66,7 @@ html, body {
 .coming-soon {
     display: grid;
     place-items: center;
-    height: 80vh;
+    height: 70vh;
     text-align: center;
 }
 
@@ -69,18 +75,17 @@ html, body {
 }
 
 .coming-soon p {
-    margin-top: 0.5em;
+    margin-top: 0.2em;
 }
 
 /* Footer styling */
 footer {
-    background-color: white;
-    color: #333;
+    background-color: #f8f9fa; /* Light grey background */
+    color: #495057; /* Dark grey text */
     text-align: center;
-    padding: 1em;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 2em 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8em;
 }
 
 .social-icons {
@@ -91,12 +96,9 @@ footer {
 }
 
 .footer-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .btn.btn-social {
@@ -111,18 +113,29 @@ footer {
 
 .footer-menu {
     list-style: none;
+    padding: 0;
+    margin: 20px 0;
     display: flex;
-    gap: 2em;
     justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.footer-menu li {
+    margin: 0 10px; /* Spacing between items */
 }
 
 .footer-menu li a {
     text-decoration: none;
-    color: inherit;
+    color: #007bff; /* Primary color for links */
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-menu li a:hover {
-    color: #007bff;
+    color: #0056b3; /* Darker shade for hover effect */
+}
+
+ul.menu {
+    margin: 0;
 }
 
 /* Mobile menu styles */
@@ -136,14 +149,14 @@ footer {
     z-index: 1000; /* Ensures it's above other elements */
 }
 
-
 /* Floating icons as background */
 .floating-icon {
     position: absolute;
-    font-size: 7rem;
+    font-size: 4rem;
     color: rgba(0, 0, 0, 0.1);
-    animation: float 5s ease-in-out infinite;
+    transition: transform 5s ease-in-out; /* Smooth transition for movement */
 }
+
 
 @keyframes float {
     0%, 100% {
@@ -159,7 +172,12 @@ footer {
     .navbar {
         flex-direction: column;
         align-items: center;
-        padding: 1em;
+        padding: 2em;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        padding-left: 0; /* Remove left padding for smaller screens */
     }
 
     .menu {
@@ -184,7 +202,7 @@ footer {
     .navbar {
         flex-direction: column; /* Stack navbar items vertically */
         align-items: center; /* Center align items */
-        padding: 0.5em; /* Adjust padding for smaller screens */
+        padding: 2em; /* Adjust padding for smaller screens */
     }
 
     .menu {
@@ -211,6 +229,23 @@ footer {
     .coming-soon h1 {
         font-size: 2.2em;
     }
+
+    .navbar {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align the content */
+    }
+
+    .navbar-brand {
+        margin-bottom: 1em; /* Space between brand and menu */
+        font-size: 0.8em;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .menu {
+        width: 100%; /* Full width to utilize the space */
+        justify-content: center; /* Center the menu items */
+    }
 }
 
 /* Responsive design adjustments for large devices */
@@ -234,5 +269,13 @@ footer {
 
     .floating-icon {
         font-size: 4rem;
+    }
+}
+
+/* Media query for screens between 575px and 1000px */
+@media (min-width: 575px) and (max-width: 1000px) {
+    .navbar {
+        padding-left: 1em; /* Adjust left padding as needed */
+        padding-right: 1em; /* Adjust right padding as needed */
     }
 }
