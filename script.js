@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.innerWidth <= 768) {
             // Define positions for each menu item in the 'W' shape
             const positions = [
-                { x: '0%', y: '10%' },    // Home
+                { x: '5%', y: '10%' },    // Home
                 { x: '20%', y: '35%' },   // Shop
                 { x: '40%', y: '10%' },   // New
                 { x: '65%', y: '35%' },   // Trending
                 { x: '75%', y: '10%' },   // Contact
                 { x: '65%', y: '60%' },   // Login
-                { x: '45%', y: '35%' },   // Signup
+                { x: '40%', y: '35%' },   // Signup - Adjusted to be on the same line as Shop and Trending
                 { x: '20%', y: '60%' }    // Cart
             ];
             
